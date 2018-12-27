@@ -1,10 +1,10 @@
 tosca_definitions_version: cloudify_dsl_1_3
 
 imports:
-  - http://www.getcloudify.org/spec/cloudify/4.2/types.yaml
-  - http://www.getcloudify.org/spec/utilities-plugin/1.4.5/plugin.yaml
-  - http://www.getcloudify.org/spec/kubernetes-plugin/2.0.0/plugin.yaml
-  - http://www.getcloudify.org/spec/dblb/0.2/plugin.yaml
+  - http://www.getcloudify.org/spec/cloudify/4.5/types.yaml
+  - plugin:cloudify-utilities-plugin
+  - plugin:cloudify-kubernetes-plugin
+  - plugin:cloudify-dblb
 
 inputs:
 
@@ -12,10 +12,10 @@ inputs:
     default: aws.yaml
 
   lb_blueprint_archive:
-    default: https://github.com/cloudify-examples/haproxy-blueprint/archive/1b56f1ebb524576e755535c3aa687e20a39b94f9.zip
+    default: https://github.com/cloudify-examples/haproxy-blueprint/archive/4.5.zip
 
   db_blueprint_archive:
-    default: https://github.com/cloudify-examples/mariadb-blueprint/archive/f2d91c267743ab14c86703efafda02cfd7cac466.zip
+    default: https://github.com/cloudify-examples/mariadb-blueprint/archive/4.5.zip
 
   kubernetes_master_ip:
     type: string
